@@ -1,0 +1,12 @@
+version: '3'
+services:
+  meu-banco-mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    volumes:
+      - mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+volumes:
+  mysql-data: {}
